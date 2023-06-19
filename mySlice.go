@@ -95,3 +95,30 @@ func TestSliceChange3() {
 	fmt.Println(s1)
 	fmt.Println(data)
 }
+
+
+func TestSliceChange4() {
+	s1 := []int{0, 1, 2}
+	s2 := []int{3, 4, 5}
+	s3 := append(s1, s2...)
+	fmt.Println(s3)
+}
+
+
+func TestSliceChange5()  {
+	s := []int{1, 2}
+	s[0] = 10
+	s[1] = 20
+	s = append(s, 100)
+	fmt.Println("验证切片修改下标：", s)
+}
+
+
+func TestSliceChinese()  {
+	str := "你好，中国，nice to meet you!"
+	s := []rune(str)
+	s[0] = '加'
+	s[1] = '油'
+	str = string(s)
+	fmt.Println(str)
+}

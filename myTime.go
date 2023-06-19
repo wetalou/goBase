@@ -16,4 +16,7 @@ func TestTimeNow() {
 	month = t.Month() // type time.Month
 	day = t.Day()     // type int
 	fmt.Println("现在的时间(t):", year, month, day)
+
+	datatime := time.Now().Format("2006-01-02 15:04:05")
+	fmt.Println("正常日期时间(t):", datatime)
 }

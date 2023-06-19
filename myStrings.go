@@ -69,3 +69,11 @@ func TestStringChange() {
 	strRune[1] = '证'
 	fmt.Println("转换后字符：" + string(strRune))
 }
+
+
+func TestStringReplace()  {
+	str := "你好，中国；你好，广东；你好，世界"
+	fmt.Println("替换前的字符串：", str)
+	str = strings.Replace(str, "你好", "加油", 2)
+	fmt.Println("替换后的字符串：", str)
+}
